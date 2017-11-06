@@ -1,47 +1,25 @@
 import json
 import csv
 
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
-class Preprocessor():
-    relatedWordsDict = {}
-    keywordCountDict = {}
+class Preprocessor:
     dataText = ""
 
-    def readKeywordFile(self):
-        with open('related_keyword.csv', 'r') as f:
-            reader = csv.DictReader(f)
-            # for row in reader:
-            #     print(row)
-
-            for row in reader:
-                for i in row:
-                    if len(i) > 1:
-                        self.keywordCountDict[i] = 0
-                        self.relatedWordsDict[row[i]] = []
-                        self.relatedWordsDict[row[i]] = i
-                        # print(row[i], self.relatedWordsDict[row[i]])
-            # print(self.relatedWordsDict)
-            # print(self.keywordCountDict)
-
+    # get histogram for whole tweets
     def readDataFile(self):
-        with open('data.json', 'r') as f:
-            for line in f:
-                tweet = json.loads(line)
-                # print(json.dumps(tweet, indent=4))
-                if 'text' in tweet:
-                    # print(tweet['text'])
-                    self.dataText += tweet['text']
-        # print("data text is \n", self.dataText.replace('\n', ' '))
-        self.dataText = self.dataText.replace('\n', ' ')
-        self.dataText = self.dataText.split(' ')
-        print(self.dataText)
+        with open('tweet_score.csv', 'w') as csvfile:
+            fieldnames = ['neg', 'neu', 'pos', 'compound']
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            with open('data.json', 'r') as f:
+                for line in f:
+                    sentences = [line]
+                    analyzer = SentimentIntensityAnalyzer()
+                    for sentence in sentences:
+                        vs = analyzer.polarity_scores(sentence)
+                        writer.writerow({'neg': vs['neg'], 'neu': vs['neu'], 'pos': vs['pos'], 'compound': vs['compound']})
 
-    def countMatchingKeyword(self):
-        for i in self.dataText:
-            if i in self.relatedWordsDict:
-                self.keywordCountDict[self.relatedWordsDict[i]] += 1
 
 if __name__ == '__main__':
     p = Preprocessor()
-    p.readKeywordFile()
     p.readDataFile()
