@@ -19,8 +19,8 @@ class stdOutListener(StreamListener):
             if not tweet['retweeted'] and \
                             'RT @' not in tweet['text'] and \
                             tweet['lang'] == "en":
-                # print(tweet['text'], '\n')
-                # print("=============================")
+                print(tweet['text'], '\n')
+                print("=============================")
 
                 fileString = 'data/' + str(datetime.datetime.now().date()) + '-' +\
                              str(datetime.datetime.now().hour) + '.json'
