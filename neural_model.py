@@ -29,7 +29,7 @@ class neural_model():
         table = csv.reader(open(file_name, newline=''), delimiter=',')
         for row in table:
 
-            if row == ['1'] or row == ['-1'] or row ==['0']:
+            if row == ['1'] or row == ['-1'] or row == ['0']:
                 int_row = [int(i) for i in row]
                 # print(int_row)
                 self.train_y.append(int_row)
@@ -44,9 +44,9 @@ class neural_model():
 if __name__ == '__main__':
     temp = neural_model()
     # temp.train()
-    temp.read_one_input_file("input/2017-11-21.csv")
-    temp.read_one_truth_file("truth/2017-11-21.csv")
-    temp.train()
+    temp.read_one_input_file("input/score.csv")
+    temp.read_one_truth_file("truth/ground_truth.csv")
+    # temp.train()
 
 
 
