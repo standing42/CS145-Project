@@ -2,15 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70a18010-d6e5-4c13-9941-cf9e50f96c16" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input/score.csv" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2017-11-21-16.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2017-11-21-17.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2017-11-21-18.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2017-11-21-19.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2017-11-21-20.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2017-11-21-21.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2017-11-21-22.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/2017-11-21-23.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/neural_model.py" afterPath="$PROJECT_DIR$/neural_model.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tweet_score.csv" afterPath="$PROJECT_DIR$/tweet_score.csv" />
@@ -61,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="neural_model.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="neural_model.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/neural_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="39" column="39" lean-forward="false" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+            <state relative-caret-position="180">
+              <caret line="12" column="101" lean-forward="false" selection-start-line="12" selection-start-column="101" selection-end-line="12" selection-end-column="101" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
               </folding>
@@ -73,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="score.csv" pinned="false" current-in-tab="true">
+      <file leaf-file-name="score.csv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/input/score.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="150">
+              <caret line="10" column="77" lean-forward="true" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -125,8 +116,8 @@
         <option value="$PROJECT_DIR$/sum_sentiments.py" />
         <option value="$PROJECT_DIR$/input/2017-11-21.csv" />
         <option value="$PROJECT_DIR$/processData.py" />
-        <option value="$PROJECT_DIR$/neural_model.py" />
         <option value="$PROJECT_DIR$/input/score.csv" />
+        <option value="$PROJECT_DIR$/neural_model.py" />
       </list>
     </option>
   </component>
@@ -226,7 +217,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.processData">
+  <component name="RunManager" selected="Python.neural_model">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -480,7 +471,21 @@
       <option name="project" value="LOCAL" />
       <updated>1512344642056</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update process data">
+      <created>1512595845425</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1512595845425</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add score csv">
+      <created>1512600885483</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1512600885483</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -517,7 +522,8 @@
     <MESSAGE value="add neural network" />
     <MESSAGE value="roughly finish neural network" />
     <MESSAGE value="update process data" />
-    <option name="LAST_COMMIT_MESSAGE" value="update process data" />
+    <MESSAGE value="add score csv" />
+    <option name="LAST_COMMIT_MESSAGE" value="add score csv" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -791,6 +797,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -815,16 +822,6 @@
           <caret line="35" column="40" lean-forward="false" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/neural_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="39" column="39" lean-forward="false" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -859,9 +856,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/input/score.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="150">
+          <caret line="10" column="77" lean-forward="true" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="77" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neural_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="101" lean-forward="false" selection-start-line="12" selection-start-column="101" selection-end-line="12" selection-end-column="101" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -2,6 +2,7 @@ from sklearn.neural_network import MLPClassifier
 import csv
 import os
 import numpy
+from sklearn.model_selection import train_test_split
 
 class neural_model():
     def __init__(self):
@@ -9,11 +10,12 @@ class neural_model():
         self.train_y = []
 
     def train(self):
-        mlp = MLPClassifier(hidden_layer_sizes=(50, 50), max_iter=100, alpha=1e-4,
+        x_train, x_test, y_train, y_test = train_test_split(self.train_x, self.train_y, test_size=0.9, random_state=0)
+        mlp = MLPClassifier(hidden_layer_sizes=(50, 50), max_iter=1000, alpha=1e-4,
                             solver='sgd', random_state=1)
 
-        mlp.fit(self.train_x, self.train_y)
-        print("Training set score: %f" % mlp.score(self.train_x, self.train_y))
+        mlp.fit(x_train, y_train)
+        print("Training set score: %f" % mlp.score( x_test, y_test))
 
     def read_one_input_file(self, file_name):
         table = csv.reader(open(file_name, newline=''), delimiter=',')
@@ -46,7 +48,7 @@ if __name__ == '__main__':
     # temp.train()
     temp.read_one_input_file("input/score.csv")
     temp.read_one_truth_file("truth/ground_truth.csv")
-    # temp.train()
+    temp.train()
 
 
 
