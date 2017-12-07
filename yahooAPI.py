@@ -1,5 +1,4 @@
 import json
-
 import requests
 
 rsp = requests.get('https://finance.google.com/finance?q=AAPL&output=json')
